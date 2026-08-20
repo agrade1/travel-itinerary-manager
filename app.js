@@ -8,6 +8,14 @@ const itinerary = {
   reservations: [
     {
       date: "2026-08-29",
+      title: "인천 -> 원주 버스",
+      time: "07:40",
+      status: "예매 완료",
+      location: "인천 -> 원주",
+      note: "대원고속 시외우등, 좌석 12, 15번",
+    },
+    {
+      date: "2026-08-29",
       title: "영월 숙소",
       time: "8/29~8/31",
       status: "확정",
@@ -27,6 +35,14 @@ const itinerary = {
       status: "여행대장 예약 완료",
       location: "경북 문경시 마성면 문경대로 1325 문경산악바이크",
     },
+    {
+      date: "2026-08-31",
+      title: "문경 -> 인천 버스",
+      time: "19:05",
+      status: "예매 완료",
+      location: "문경 -> 인천",
+      note: "대원고속 시외우등, 좌석 12, 15번. 출발 터미널 현장 발권 필요",
+    },
   ],
   days: [
     {
@@ -35,12 +51,12 @@ const itinerary = {
       summary: "인천에서 원주로 이동해 식사와 미정 일정을 보내고 영월 숙소로 이동.",
       items: [
         {
-          time: "시간 미정",
+          time: "07:40",
           type: "이동",
           title: "인천에서 원주행 버스 탑승",
           location: "인천 -> 원주",
-          status: "재예매 필요",
-          note: "기존 버스 일정은 다시 예매 예정",
+          status: "예매 완료",
+          note: "대원고속 시외우등, 좌석 12, 15번",
         },
         {
           time: "도착시간 미정",
@@ -48,7 +64,7 @@ const itinerary = {
           title: "원주 도착",
           location: "원주",
           status: "미정",
-          note: "버스 재예매 후 도착시간 확정 필요",
+          note: "도착 예정시간은 승차권 또는 터미널 기준 재확인",
         },
         {
           time: "점심 예상",
@@ -206,25 +222,20 @@ const itinerary = {
           title: "ATV 정리 후 귀가 대기",
           location: "문경 / 점촌 일대",
           status: "미정",
-          note: "터미널 이동 및 귀가 버스 대기",
+          note: "19:05 문경 -> 인천 버스 전까지 터미널 이동 및 대기",
         },
         {
-          time: "16:00 이후 후보",
+          time: "19:05",
           type: "귀가",
-          title: "문경/점촌에서 인천행 버스 탑승",
-          location: "문경/점촌 -> 인천",
-          status: "미예매",
-          note: "ATV 후 바로 가려면 16시 이후, 여유 있게는 18시대 후보",
+          title: "문경에서 인천행 버스 탑승",
+          location: "문경 -> 인천",
+          status: "예매 완료",
+          note: "대원고속 시외우등, 좌석 12, 15번. 출발 터미널 현장 발권 필요",
         },
       ],
     },
   ],
   openItems: [
-    {
-      title: "8/29 인천 -> 원주 버스",
-      priority: "높음",
-      note: "버스 시간 확인 후 원주행으로 재예매",
-    },
     {
       title: "8/29 원주 일정",
       priority: "중간",
@@ -249,11 +260,6 @@ const itinerary = {
       title: "8/31 문경 이동",
       priority: "높음",
       note: "숙소에서 문경산악바이크까지 실제 이동시간과 이동수단",
-    },
-    {
-      title: "8/31 귀가 버스",
-      priority: "높음",
-      note: "문경/점촌에서 인천행 버스 시간 및 예매",
     },
   ],
 };
@@ -357,6 +363,7 @@ function renderSidePanel() {
           <strong>${item.title}</strong>
           <p>${item.date} · ${item.time}</p>
           <p>${item.location}</p>
+          ${item.note ? `<p>${item.note}</p>` : ""}
           <span class="status-chip ${statusClass(item.status)}">${item.status}</span>
         </article>
       `,
