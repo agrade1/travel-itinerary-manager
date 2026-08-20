@@ -44,6 +44,50 @@ const itinerary = {
       note: "대원고속 시외우등, 좌석 12, 15번. 출발 터미널 현장 발권 필요",
     },
   ],
+  meals: [
+    {
+      date: "2026-08-29",
+      meal: "점심",
+      title: "이레담막국수 본점",
+      location: "강원 원주시 원문로 336 이레담막국수",
+      note: "막국수",
+    },
+    {
+      date: "2026-08-29",
+      meal: "저녁",
+      title: "영월엄가 김인수할머니순두부",
+      location: "강원 영월군 영월읍 단종로16번길 41 영월엄가 김인수할머니순두부",
+      note: "순두부",
+    },
+    {
+      date: "2026-08-30",
+      meal: "점심",
+      title: "일미닭강정",
+      location: "강원 영월군 영월읍 서부시장길 15",
+      note: "닭강정",
+    },
+    {
+      date: "2026-08-30",
+      meal: "저녁",
+      title: "고기 구워먹기",
+      location: "숙소",
+      note: "숙소에서 고기 구워먹기",
+    },
+    {
+      date: "2026-08-31",
+      meal: "점심",
+      title: "문경 서울만두",
+      location: "경북 문경시 신흥로 161-8 1층",
+      note: "서울만두",
+    },
+    {
+      date: "2026-08-31",
+      meal: "저녁",
+      title: "새재할매집",
+      location: "경북 문경시 문경읍 새재로 922 새재할매집",
+      note: "석쇠불고기",
+    },
+  ],
   days: [
     {
       date: "2026-08-29",
@@ -69,10 +113,10 @@ const itinerary = {
         {
           time: "점심 예상",
           type: "식사",
-          title: "원주에서 식사",
-          location: "원주",
-          status: "미정",
-          note: "식당과 시간은 추후 결정",
+          title: "이레담막국수 본점",
+          location: "강원 원주시 원문로 336 이레담막국수",
+          status: "확정",
+          note: "점심: 막국수",
         },
         {
           time: "식사 후~숙소 이동 전",
@@ -80,7 +124,7 @@ const itinerary = {
           title: "원주 일정 미정",
           location: "원주",
           status: "미정",
-          note: "카페, 산책, 주변 일정 등 추후 결정",
+          note: "식사 후 카페, 산책, 주변 일정 등 추후 결정",
         },
         {
           time: "오후~저녁",
@@ -97,6 +141,14 @@ const itinerary = {
           location: "강원도 영월군 주천면 금용강변로 474-4",
           status: "확정",
           note: "2박 예정",
+        },
+        {
+          time: "저녁 예상",
+          type: "식사",
+          title: "영월엄가 김인수할머니순두부",
+          location: "강원 영월군 영월읍 단종로16번길 41 영월엄가 김인수할머니순두부",
+          status: "확정",
+          note: "저녁: 순두부",
         },
         {
           time: "저녁~밤",
@@ -122,12 +174,20 @@ const itinerary = {
       summary: "오후 동강래프팅. 전후로 숙소와 영월 일대 자유시간.",
       items: [
         {
-          time: "아침~12:30",
+          time: "아침~점심 전",
           type: "빈 시간",
           title: "숙소 체류 또는 영월 근처 자유시간",
           location: "영월 / 숙소",
           status: "미정",
           note: "래프팅 전 무리 없는 일정 권장",
+        },
+        {
+          time: "점심 예상",
+          type: "식사",
+          title: "일미닭강정",
+          location: "강원 영월군 영월읍 서부시장길 15",
+          status: "확정",
+          note: "점심: 닭강정",
         },
         {
           time: "13:00~13:30",
@@ -162,12 +222,20 @@ const itinerary = {
           note: "현장 진행에 따라 더 걸릴 수 있음",
         },
         {
-          time: "17:00 이후~밤",
+          time: "저녁",
+          type: "식사",
+          title: "숙소에서 고기 구워먹기",
+          location: "숙소",
+          status: "확정",
+          note: "저녁: 고기 구워먹기",
+        },
+        {
+          time: "저녁 이후~밤",
           type: "빈 시간",
           title: "숙소 복귀 후 자유시간",
           location: "숙소 / 영월 일대",
           status: "미정",
-          note: "전날 별 보기를 못 하면 이 시간대 활용 가능",
+          note: "별 보기를 못 하면 이 시간대 활용 가능",
         },
         {
           time: "숙박",
@@ -201,12 +269,20 @@ const itinerary = {
           note: "",
         },
         {
-          time: "11:00~13:00",
+          time: "11:00~점심 전",
           type: "이동",
           title: "영월 숙소에서 문경산악바이크로 이동",
           location: "영월 -> 경북 문경시 마성면 문경대로 1325",
           status: "이동 필요",
           note: "13시 예약이라 11시대 출발 권장",
+        },
+        {
+          time: "점심 예상",
+          type: "식사",
+          title: "문경 서울만두",
+          location: "경북 문경시 신흥로 161-8 1층",
+          status: "확정",
+          note: "점심: 서울만두",
         },
         {
           time: "13:00~15:00",
@@ -222,7 +298,15 @@ const itinerary = {
           title: "ATV 정리 후 귀가 대기",
           location: "문경 / 점촌 일대",
           status: "미정",
-          note: "19:05 문경 -> 인천 버스 전까지 터미널 이동 및 대기",
+          note: "저녁 식사와 터미널 이동 포함",
+        },
+        {
+          time: "저녁 예상",
+          type: "식사",
+          title: "새재할매집",
+          location: "경북 문경시 문경읍 새재로 922 새재할매집",
+          status: "확정",
+          note: "저녁: 석쇠불고기",
         },
         {
           time: "19:05",
@@ -237,9 +321,9 @@ const itinerary = {
   ],
   openItems: [
     {
-      title: "8/29 원주 일정",
+      title: "8/29 원주 식사 후 일정",
       priority: "중간",
-      note: "원주에서 식사할 곳과 식사 후 할 일 결정",
+      note: "이레담막국수 이후 숙소 이동 전 할 일 결정",
     },
     {
       title: "8/29 별 보기",
@@ -365,6 +449,19 @@ function renderSidePanel() {
           <p>${item.location}</p>
           ${item.note ? `<p>${item.note}</p>` : ""}
           <span class="status-chip ${statusClass(item.status)}">${item.status}</span>
+        </article>
+      `,
+    )
+    .join("");
+
+  $("#meals").innerHTML = itinerary.meals
+    .map(
+      (item) => `
+        <article class="mini-card">
+          <strong>${item.meal} · ${item.title}</strong>
+          <p>${item.date}</p>
+          <p>${item.location}</p>
+          <span class="status-chip">${item.note}</span>
         </article>
       `,
     )

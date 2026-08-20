@@ -358,6 +358,7 @@ h2 {
 }
 
 .reservation-list,
+.meal-list,
 .todo-list {
   display: grid;
   gap: 10px;
